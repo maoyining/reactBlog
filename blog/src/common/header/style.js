@@ -5,12 +5,14 @@ export const HeaderWrapper =styled.div`
   height:56px;
   border-bottom:1px solid #f0f0f0;
   box-shadow:0 5px 10px 0 rgba(0,64,128,.05);
-  line-height:56px;
+  line-height:56px;  
 `;
-export const Logo =styled.a`
+export const Logo =styled.a.attrs({
+  href:'/'
+})`
   position:absolute;
   height:56px;
-  width:150px;
+  width:120px;
   top:0;
   left:1%;
   display:inline-block;
@@ -24,7 +26,8 @@ export const Nav = styled.div`
   width:960px;
   height:100%;
   margin:0 auto;
-  
+  padding:0 70px;
+  box-sizing:border-box;
 `
 export const NavItem=styled.div`
   &.left{
@@ -42,20 +45,59 @@ export const NavItem=styled.div`
   display:inline-block;
   cursor: pointer;
 `
+
+export const SearchWrapper=styled.div`
+  float: left;
+  position:relative;
+
+  .iconfont{
+    position:absolute;
+    right:5px;
+    bottom:12px;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background:#969696;
+    line-height:30px;
+    text-align:center;
+    color:white;
+  }
+`
+
 export const NavSearch = styled.input.attrs({
-  placeholder:'搜索'
+  placeholder:'Search'
 })`
-  width:'160px';
+  width:'140px';
   height:38px;
-  margin-left:20px;
+  margin-left:10px;
   border:none;
   outline:none;
   border-radius:19px;
   background:#eee;
   padding:0 20px;
   box-sizing:border-box;
+  &::placeholder{ /*伪元素::placeholder可以选择一个表单元素的占位文本，它允许开发者和设计师自定义占位文本的样式。*/
+    color:#999
+  }
 `
 export const Addition =styled.div`
   position:absolute;
-  
+  right:0;
+  top:0;
+  height:56px;
+`
+
+export const Button = styled.div`
+  float:right;
+  line-height:38px;
+  border-radius:19px;
+  margin-top:9px;
+  margin-right:20px;
+  padding:0 20px;
+  border:1px solid #00909e;
+  color:#00909e;
+  &.writing{
+    color:white;
+    background:#00909e;
+  }
 `
