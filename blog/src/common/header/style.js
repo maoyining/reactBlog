@@ -49,7 +49,6 @@ export const NavItem=styled.div`
 export const SearchWrapper=styled.div`
   float: left;
   position:relative;
-
   .iconfont{
     position:absolute;
     right:5px;
@@ -57,27 +56,46 @@ export const SearchWrapper=styled.div`
     width:30px;
     height:30px;
     border-radius:50%;
-    background:#969696;
     line-height:30px;
     text-align:center;
-    color:white;
+    color:#969696;
+    &.focused{
+      background:#969696;
+      color:white;
+    }
   }
 `
 
 export const NavSearch = styled.input.attrs({
   placeholder:'Search'
 })`
-  width:'140px';
+  width:160px;
   height:38px;
   margin-left:10px;
   border:none;
   outline:none;
   border-radius:19px;
   background:#eee;
-  padding:0 20px;
+  padding:0 35px 0 20px;
   box-sizing:border-box;
+  color:#777;
   &::placeholder{ /*伪元素::placeholder可以选择一个表单元素的占位文本，它允许开发者和设计师自定义占位文本的样式。*/
     color:#999
+  }
+  &.focused{
+    width:240px;
+  }
+  &.slide-enter{
+    transition:all .2s ease-out;
+  }
+  &.slide-enter-active{
+    width:240px;
+  }
+  &.slide-exit{
+    transition:all .2s ease-out;
+  }
+  &.slide-exit-active{
+    width:160px;
   }
 `
 export const Addition =styled.div`

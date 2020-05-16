@@ -1,15 +1,9 @@
-import React, { Component } from 'react'
-import { HeaderWrapper, Logo, Nav, NavItem, NavSearch, Button,Addition,SearchWrapper } from './style'
-class Header extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-
-    }
-  }
-
-  render() {
+import React from 'react'
+import { HeaderWrapper, Logo, Nav, NavItem, NavSearch, Button, Addition, SearchWrapper } from './style'
+import { CSSTransition } from 'react-transition-group';
+import {connect} from 'react-redux'
+import { actionCreators } from './store';
+function Header (props){
     return (
       <HeaderWrapper>
         <Logo></Logo>
@@ -19,19 +13,43 @@ class Header extends Component {
           <NavItem className='right'><i className="iconfont">&#xe605;</i></NavItem>
           <NavItem className='right'>登陆</NavItem>
           <SearchWrapper>
-          <NavSearch></NavSearch>
-          <i className='iconfont'>&#xe69d;</i>
+            <CSSTransition
+              in={props.focused}
+              timeout={200}
+              classNames="slide">
+              <NavSearch
+                className={props.focused ? 'focused' : ''}
+                onFocus={props.handleInputFocus}
+                onBlur={props.handleInputBlur}>
+              </NavSearch>
+            </CSSTransition>
+            <i className={props.focused ? 'focused iconfont' : 'iconfont'}>&#xe69d;</i>
           </SearchWrapper>
         </Nav>
         <Addition>
-         <Button>分享</Button>
-         <Button className='writing'>
-           <i className="iconfont">&#xe678;</i>&nbsp;
-           创作</Button> 
+          <Button>分享</Button>
+          <Button className='writing'>
+            <i className="iconfont">&#xe678;</i>&nbsp;
+            创作
+          </Button>
         </Addition>
       </HeaderWrapper>
     )
-  }
 }
 
-export default Header
+const mapStateToProps=(state)=>{
+  return {
+    focused:state.header.focused
+  }
+}
+const mapDispatchToProps=(dispatch)=>({
+  handleInputFocus(){
+    const action = actionCreators.getFocusedAction()
+    dispatch(action)
+  },
+  handleInputBlur(){
+    const action = actionCreators.getBlurAction()
+    dispatch(action)
+  }
+})
+export default connect(mapStateToProps,mapDispatchToProps)(Header)
