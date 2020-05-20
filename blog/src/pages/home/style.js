@@ -1,0 +1,68 @@
+import styled from 'styled-components'
+export const HomeWrapper = styled.div`
+  width:960px;
+  margin:30px auto 0;
+  overflow:hidden;
+`
+export const HomeLeft =  styled.div`
+  margin-left:15px;
+  width:625px;
+  float:left;
+  .banner-img{
+    width:625px;
+    height:270px;
+    border-radius:10px;
+  }
+`
+export const HomeRight = styled.div`
+  
+  width:240px;
+  float:right;
+`
+export const ListItem = styled.div`
+  padding:30px 0;  
+  border-bottom:1px solid #dcdcdc;
+  .pic{
+    display:block;
+    width:150px;
+    height:100px;
+    float:right;
+    border-radius: 10px;
+  }
+  
+`
+
+export const ListInfo = styled.div`
+  width:475px;
+  .title{
+    font-size:18px;
+    line-height:27px;
+    font-weight:bold;
+    color:#333;
+  }
+
+  .desc{
+    font-size:13px;
+    line-height:24px;
+    color:#999;
+    padding:10px 10px 5px 0;
+  }
+`
+export const SortWrapper = styled.div`
+  margin:30px 0;
+  .sortInfo{
+    color:rgb(49,103,111,0.46);
+    border-bottom:1px solid #dcdcdc;
+    padding:10px 0;
+  }
+`
+export const SortItem = styled.div`
+  height:40px;
+  background:rgb(133,194,202,0.5);
+  margin:8px 0;
+  border-radius:5px;
+  line-height:40px;
+  text-align:center;
+  color:rgb(69,139,149);
+  cursor:pointer;
+`
