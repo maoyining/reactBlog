@@ -8,7 +8,7 @@ class Sort extends Component {
       <SortWrapper>
         <p className="sortInfo">我的分类</p>
         {this.props.list.map((item, index) => {
-          return (<SortItem>{item}</SortItem>)
+          return (<SortItem key={index}>{item}{' >'}</SortItem>)
         })}
       </SortWrapper>
 

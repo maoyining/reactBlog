@@ -3,6 +3,7 @@ import { HomeWrapper, HomeLeft,HomeRight } from './style'
 import homePic from '../../static/cat.png'
 import List from './components/List'
 import Sort from './components/Sort'
+import Collection from './components/Collection'
 
 class Home extends Component {
   render(){
@@ -13,7 +14,8 @@ class Home extends Component {
           <List></List>
         </HomeLeft>
         <HomeRight>
-          <Sort></Sort>
+          <Sort/>
+          <Collection/>
         </HomeRight>
        
       </HomeWrapper>

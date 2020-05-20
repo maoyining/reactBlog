@@ -49,11 +49,11 @@ export const ListInfo = styled.div`
   }
 `
 export const SortWrapper = styled.div`
-  margin:30px 0;
+  
   .sortInfo{
     color:rgb(49,103,111,0.46);
     border-bottom:1px solid #dcdcdc;
-    padding:10px 0;
+    padding:15px 0;
   }
 `
 export const SortItem = styled.div`
@@ -65,4 +65,25 @@ export const SortItem = styled.div`
   text-align:center;
   color:rgb(69,139,149);
   cursor:pointer;
+`
+
+export const CollectWrapper = styled.div`
+  margin:60px 0;
+  .collectInfo{
+    color:rgb(49,103,111,0.46);
+    border-bottom:1px solid #dcdcdc;
+    padding:15px 0;
+  }
+`
+export const CollectItem = styled.a`
+  margin:8px 0;
+  background:rgb(225,106,136,0.2);
+  height:40px;
+  border-radius:5px;
+  line-height:40px;
+  text-align:center;
+  color:#DD5B75;
+  display:block;
+  cursor: pointer;
+  text-decoration:none;
 `
