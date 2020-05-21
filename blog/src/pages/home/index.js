@@ -4,7 +4,8 @@ import homePic from '../../static/cat.png'
 import List from './components/List'
 import Sort from './components/Sort'
 import Collection from './components/Collection'
-
+import {connect} from 'react-redux'
+import {actionCreator} from './store'
 class Home extends Component {
   render(){
     return(
@@ -21,5 +22,14 @@ class Home extends Component {
       </HomeWrapper>
     )
   }
+  componentDidMount(){
+    this.props.initHomeDate()
+  }
 }
-export default Home
+
+const DispatchToProps = (dispatch)=>({
+  initHomeDate(){
+    dispatch(actionCreator.getHomeList())
+  }
+})
+export default connect(null,DispatchToProps)(Home)

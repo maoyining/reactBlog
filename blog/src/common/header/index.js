@@ -71,4 +71,4 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(action)
   }
 })
-export default connect(mapStateToProps, mapDispatchToProps)(Header)
+export default connect(mapStateToProps, mapDispatchToProps)(Header) 
