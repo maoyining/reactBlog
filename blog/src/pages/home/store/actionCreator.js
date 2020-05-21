@@ -28,3 +28,8 @@ export const getMoreArticle = (page)=>{
     })
  }
 }
+
+export const toggleTopShow = (show)=>({
+  type:constants.TOGGLE_SCROLL_TOP,
+  value:fromJS(show)
+})
