@@ -3,7 +3,8 @@ import {constants} from './index'
 const defaultState=fromJS({
   articleList:[],
   sortList:[],
-  collectList:[]
+  collectList:[],
+  articlePage:1
 })
 
 export default (state=defaultState,action)=>{
@@ -15,6 +16,11 @@ export default (state=defaultState,action)=>{
         collectList:fromJS(action.collectList)
       })
     }
+    case constants.ADD_ARTICLE_LIST:
+      return state.merge({
+        'articleList':state.get('articleList').concat(action.value),
+        'articlePage':action.nextPage
+      })
     default:return state;
   }
   

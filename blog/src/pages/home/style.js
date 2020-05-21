@@ -87,3 +87,14 @@ export const CollectItem = styled.a`
   cursor: pointer;
   text-decoration:none;
 `
+export const LoadMore =styled.div`
+  width:100%;
+  height:40px;
+  border-radius:20px;
+  background:rgb(142,197,252,0.2);
+  margin:20px 0;
+  line-height:40px;
+  text-align:center;
+  color:#2B86C5;
+  cursor: pointer;
+`

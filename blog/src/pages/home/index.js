@@ -18,7 +18,6 @@ class Home extends Component {
           <Sort/>
           <Collection/>
         </HomeRight>
-       
       </HomeWrapper>
     )
   }

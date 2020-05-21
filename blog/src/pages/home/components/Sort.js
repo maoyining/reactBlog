@@ -3,7 +3,6 @@ import { SortWrapper, SortItem } from '../style'
 import { connect } from 'react-redux'
 class Sort extends Component {
   render() {
-    console.log(this.props.list)
     return (
       <SortWrapper>
         <p className="sortInfo">我的分类</p>
