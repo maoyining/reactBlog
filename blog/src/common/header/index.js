@@ -3,6 +3,8 @@ import { HeaderWrapper, Logo, Nav, NavItem, NavSearch, Button, Addition, SearchW
 import { CSSTransition } from 'react-transition-group';
 import { connect } from 'react-redux'
 import { actionCreators } from './store';
+import { Link } from 'react-router-dom'
+
 function Header(props) {
   const getSearchList = props.searchList.map((item, index) => {
     return <SearchInfoItem key={index}>{item}</SearchInfoItem>
@@ -23,9 +25,13 @@ function Header(props) {
   }
   return (
     <HeaderWrapper>
-      <Logo></Logo>
+      <Link to='/' >
+        <Logo></Logo>
+      </Link>
       <Nav>
-        <NavItem className='left active'>首页</NavItem>
+        <Link to='/'>
+          <NavItem className='left active'>首页</NavItem>
+        </Link>
         <NavItem className='left'>下载简历</NavItem>
         <NavItem className='right'><i className="iconfont">&#xe605;</i></NavItem>
         <NavItem className='right'>登陆</NavItem>

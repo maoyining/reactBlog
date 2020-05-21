@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { HomeWrapper, HomeLeft, HomeRight, BackToTop } from './style'
 import homePic from '../../static/cat.png'
 import List from './components/List'
@@ -6,7 +6,10 @@ import Sort from './components/Sort'
 import Collection from './components/Collection'
 import { connect } from 'react-redux'
 import { actionCreator } from './store'
-class Home extends Component {
+class Home extends PureComponent {
+
+  //性能调优
+  
   handleScrollTop() {
     window.scrollTo(0, 0)
   }

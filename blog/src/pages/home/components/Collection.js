@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { CollectWrapper,CollectItem } from '../style'
 import {connect} from 'react-redux'
 
-class Collection extends Component {
+class Collection extends PureComponent {
   constructor(props) {
     super(props)
 

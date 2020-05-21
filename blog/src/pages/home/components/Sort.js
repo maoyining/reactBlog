@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { SortWrapper, SortItem } from '../style'
 import { connect } from 'react-redux'
-class Sort extends Component {
+class Sort extends PureComponent {
   render() {
     return (
       <SortWrapper>
