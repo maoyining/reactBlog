@@ -23,7 +23,7 @@ class Mark extends PureComponent {
     )
   }
   componentDidMount(){
-    axios.get('/assets/article/p1.md').then((res)=>{
+    axios.get('/assets/article/'+this.props.category+'/p'+this.props.id+'.md').then((res)=>{
       this.setState({
         input:res.data
       })

@@ -4,18 +4,19 @@ import Mark from '../detail/components/Mark'
 class Detail extends Component {
   render() {
 
-
+    const {category,id,title,time}=this.props.match.params
     return (
       <DetailWrapper>
-        <Header>JavaScript事件冒泡 事件捕获 事件委托</Header>
+        <Header>{title}</Header>
         <Info>
           <i className="iconfont">&#xe600;</i>
-          {"2020-05-22 · "}
+          {"  "}{time}{" · "}
           <i className="iconfont">&#xe7ab;</i>
-          {"JavaScript篇"}</Info>
+          {"  "}{category}{"篇"}</Info>
         <Content>
-          <Mark></Mark>
+          <Mark category={category} id={id}></Mark>
         </Content>
+        <Info>已经到底啦~</Info>
       </DetailWrapper>
     )
   }
