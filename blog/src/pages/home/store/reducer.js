@@ -24,6 +24,10 @@ export default (state=defaultState,action)=>{
       })
     case constants.TOGGLE_SCROLL_TOP:
       return state.set('showScroll',action.value)
+    case constants.UPDATE_HOMEDATA:{
+      console.log(action.value)
+      return state.set('articleList',action.value)
+    }
     default:return state;
   }
   

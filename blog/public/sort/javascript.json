@@ -1,0 +1,12 @@
+{
+  "articleList": [
+    {
+      "id": 1,
+      "title": "JavaScript事件冒泡 事件捕获 事件委托",
+      "desc": "事件的本质是程序各个组成部分之间的一种通信方式，也是异步编程的一种实现，一旦这个事件发生，就会执行监听函数。该方法没有返回值。...",
+      "imgUrl": "./assets/img/list.jpeg",
+      "category":"javascript",
+      "time":"2020-05-22"
+    }
+  ]
+}

@@ -8,6 +8,12 @@ const initHomeList = (value)=>({
   collectList:value.collectList
 })
 
+
+const updateHomeList = (value)=>({
+  type:constants.UPDATE_HOMEDATA,
+  value:fromJS(value),
+})
+
 const addMoreArticle = (value,nextPage)=>({
   type:constants.ADD_ARTICLE_LIST,
   value:fromJS(value),
@@ -33,3 +39,11 @@ export const toggleTopShow = (show)=>({
   type:constants.TOGGLE_SCROLL_TOP,
   value:fromJS(show)
 })
+
+export const getSortList = (item)=>{
+  return (dispatch)=>{
+    axios.get('/sort/'+item+'.json').then((res)=>{
+      dispatch(updateHomeList(res.data.articleList))
+    })
+  }
+}
