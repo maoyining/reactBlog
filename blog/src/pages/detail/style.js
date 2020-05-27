@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 export const DetailWrapper = styled.div`
-  width:750px;
+  width:800px;
   margin:0 auto;
   overflow:hidden;
   padding-bottom:100px;

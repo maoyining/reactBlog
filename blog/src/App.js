@@ -10,7 +10,7 @@ import Detail from './pages/detail'
 function App() {
   return (
     <Provider store={store}>
-      <GlobalStyled /> 
+      {/* <GlobalStyled />  */}
       <GlobalStyledIcon />
       <BrowserRouter>
         <Header />
