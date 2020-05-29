@@ -140,6 +140,10 @@ export const Button = styled.div`
     color:white;
     background:#00909e;
   }
+  a{
+    text-decoration:none;
+    color:white;
+  }
 `
 export const SearchInfoItem = styled.a`
   cursor: pointer;

@@ -54,8 +54,8 @@ function Header(props) {
         <Button>分享</Button>
         <Button className='writing'>
           <i className="iconfont">&#xe678;</i>&nbsp;
-            创作
-          </Button>
+          <a href="/assets/回顾与作品集.pdf">作品集</a> 
+        </Button>
       </Addition>
     </HeaderWrapper>
   )

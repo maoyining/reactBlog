@@ -49,7 +49,6 @@ export const ListInfo = styled.div`
   }
 `
 export const SortWrapper = styled.div`
-  
   .sortInfo{
     color:rgb(49,103,111,0.46);
     border-bottom:1px solid #dcdcdc;
@@ -62,6 +61,12 @@ export const SortItem = styled.div`
   line-height:40px;
   text-align:center;
   color:rgb(69,139,149);
+  
+  :hover{
+    background:rgb(82,171,198,0.2);
+    box-shadow:0px 0px 8px 6px rgba(0,64,128,.05);
+    border-radius:5px;
+  }
   cursor:pointer;
 `
 
