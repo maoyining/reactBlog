@@ -32,7 +32,7 @@ function Header(props) {
         <Link to='/'>
           <NavItem className='left active'>首页</NavItem>
         </Link>
-        <NavItem className='left'>下载简历</NavItem>
+        <NavItem className='left'><a href="/assets/web前端实习-毛忆宁-13588804610.pdf">查看简历</a></NavItem>
         <NavItem className='right'><i className="iconfont">&#xe605;</i></NavItem>
         <NavItem className='right'>登陆</NavItem>
         <SearchWrapper>

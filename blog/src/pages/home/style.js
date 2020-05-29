@@ -58,9 +58,7 @@ export const SortWrapper = styled.div`
 `
 export const SortItem = styled.div`
   height:40px;
-  background:rgb(133,194,202,0.5);
   margin:8px 0;
-  border-radius:5px;
   line-height:40px;
   text-align:center;
   color:rgb(69,139,149);
@@ -99,20 +97,3 @@ export const LoadMore =styled.div`
   cursor: pointer;
 `
 
-export const BackToTop = styled.div`
-  position:fixed;
-  width:60px;
-  height:60px;
-  line-height:60px;
-  text-align:center;
-  border:1px solid rgb(43,134,197,0.5);
-  right:100px;
-  bottom:30px;
-  font-size:14px;
-  border-radius:30px;
-  .iconfont{
-    font-size:40px;
-    color:#2B86C5;
-  }
-  cursor: pointer;
-`

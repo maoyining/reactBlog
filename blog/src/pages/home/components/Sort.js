@@ -6,12 +6,18 @@ class Sort extends PureComponent {
   render() {
     return (
       <SortWrapper>
-        <p className="sortInfo">我的分类</p>
+        <p className="sortInfo">{"  我的分类  "}<i className="iconfont">&#xe7ab;</i></p>
+        <SortItem>{"查看全部"}</SortItem>
         {this.props.list.map((item, index) => {
-          return (<SortItem onClick={()=>{this.props.getSortList(item)}} key={index}>{item}{' >'}</SortItem>)
-        })}
+          return (
+            <SortItem 
+              onClick={()=>{this.props.getSortList(item)}} 
+              key={index}
+            >{item}{' 篇'}
+            </SortItem>
+          )
+        })}  
       </SortWrapper>
-
     )
   }
 }

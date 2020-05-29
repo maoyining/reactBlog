@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import { DetailWrapper, Header, Content, Info } from './style'
 import Mark from '../detail/components/Mark'
+import  BackToTop  from '../../common/BackToTop'
+
 class Detail extends Component {
   render() {
 
     const {category,id,title,time}=this.props.match.params
     return (
+      <div>
       <DetailWrapper>
         <Header>{title}</Header>
         <Info>
@@ -18,6 +21,8 @@ class Detail extends Component {
         </Content>
         <Info>已经到底啦~</Info>
       </DetailWrapper>
+      <BackToTop></BackToTop>
+      </div>
     )
   }
 }

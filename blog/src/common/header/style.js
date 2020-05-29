@@ -38,6 +38,13 @@ export const NavItem=styled.div`
   &.active{
     color:#00909e
   }
+  a{
+    text-decoration:none;
+    color:#333;
+  }
+  a:hover{
+    color:#00909e;
+  }
   padding:0 15px;
   color:#333;
   display:inline-block;
