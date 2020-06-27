@@ -1,0 +1,12 @@
+{
+  "articleList": [
+    {
+      "id": 2,
+      "title": "CSS主流布局篇",
+      "desc": "布局难：错误定位难，看起来套路少，但其实是有规律可循的 什么是布局？整个HTML页面的整体骨架。布局不是某个技术内容，而是一种设计思想。...",
+      "imgUrl": "./assets/img/list.jpeg",
+      "category":"css",
+      "time":"2020-05-21"
+    }
+  ]
+}

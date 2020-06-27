@@ -1,0 +1,12 @@
+{
+  "articleList": [
+    {
+      "id": 4,
+      "title": "React 基础学习记录",
+      "desc": "eact是声明式开发，面向数据编程，只要把数据构建好了，react就会自动根据这些数据构建整个页面的DOM，可以节约大量的DOM操作。之前的直接操作DOM或者Jquery是命令式编程...",
+      "imgUrl": "./assets/img/list.jpeg",
+      "category": "react",
+      "time": "2020-05-24"
+    }
+  ]
+}
